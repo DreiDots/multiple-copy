@@ -41,5 +41,11 @@
 		"mocha": "^8.4.0",
 		"typescript": "^4.3.2",
 		"vscode-test": "^1.5.2"
+	},
+	"__metadata": {
+		"id": "35beeaf7-5d1d-47df-83b6-6a8fc09057d0",
+		"publisherId": "4e19f898-6c85-49b7-9607-f05b3ade9e5c",
+		"publisherDisplayName": "DreiDots",
+		"installedTimestamp": 1624851560383
 	}
 }
