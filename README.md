@@ -1,32 +1,34 @@
-Extension for Multiple Copy Paste.
+# Extension for Multiple Copy Paste.
 
 
-Description : 
+## Description : 
 
 This extension helps with problem of having a single copy instance, By using this a user can copy multiple things and paste them accordingly without worrying about overwriting of previous data.
 
 
-Usage : 
+## Usage : 
 
-To copy the selected text :
+### To copy the selected text :
+<ol>
+<li>Enter ctrl+shift+p  (to open command palette) or use shift + c to copy skip step 2 if you do that.</li>
+<li>Enter copymultiple command.</li>
+<li>Extension will prompt for number to copy current selected text.</li>
+</ol>
 
-1.Enter ctrl+shift+p  (to open command palette) or use shift + c to copy skip step 2 if you do that<br />
-2.Enter copymultiple command. <br />
-3.Extension will prompt for number to copy current selected text.<br /> 
+### To paste the particular copied instance : 
+<ol>
+<li>Enter ctrl+shift+p  (to open command palette) or use shift + v to paste skip step 2 if you do that.</li>
+<li>Enter past emultiple command.</li>
+<li>Extension will prompt for number to paste previously copied data allocated to that number.</li>
+</ol>
 
-
-To paste the particular copied instance : 
-
-1.Enter ctrl+shift+p  (to open command palette) or use shift + v to paste skip step 2 if you do that. <br />
-2.Enter pastemultiple command. <br />
-3.Extension will prompt for number to paste previously copied data allocated to that number.<br /> 
 <br />
 <br />
 
 ![Step1](https://user-images.githubusercontent.com/41703901/123559936-cbec0c00-d7bc-11eb-86aa-1a14de122362.png)
 
 <br />
-**Select the text**
+<strong>Select the text</strong> <!---for some reason the markdown syntax for bold isn't working, so added the html syntax here -->
 <br />
 <br />
 
