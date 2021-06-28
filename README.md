@@ -10,14 +10,14 @@ Usage :
 
 To copy the selected text :
 
-1.Enter ctrl+shift+p  (to open command palette) <br />
+1.Enter ctrl+shift+p  (to open command palette) or use shift + c to copy skip step 2 if you do that<br />
 2.Enter copymultiple command. <br />
 3.Extension will prompt for number to copy current selected text.<br /> 
 
 
 To paste the particular copied instance : 
 
-1.Enter ctrl+shift+p  (to open command palette). <br />
+1.Enter ctrl+shift+p  (to open command palette) or use shift + v to paste skip step 2 if you do that. <br />
 2.Enter pastemultiple command. <br />
 3.Extension will prompt for number to paste previously copied data allocated to that number.<br /> 
 <br />
@@ -32,7 +32,7 @@ To paste the particular copied instance :
 
 ![Step2](https://user-images.githubusercontent.com/41703901/123559945-d0182980-d7bc-11eb-92d1-204e57ca7b45.png)
 <br />
-**ctrl+shift+p to open the command pallet and select the multiple copy**
+**ctrl+shift+p to open the command pallet and select the multiple copy  or use shift + c to copy**
 <br />
 <br />
 ![Step3](https://user-images.githubusercontent.com/41703901/123559949-d1e1ed00-d7bc-11eb-9b49-b66d42f62ecc.png)
@@ -47,12 +47,12 @@ To paste the particular copied instance :
 <br />
 ![Step5](https://user-images.githubusercontent.com/41703901/123559951-d4dcdd80-d7bc-11eb-88d0-2d26cd237c46.png)
 <br />
-**go to wherever you want to paste the data you have coped and again use command pallet (ctrl+shift+p) and chose pastemultiple
+**go to wherever you want to paste the data you have coped and again use command pallet (ctrl+shift+p) and chose pastemultiple or use shift+v**
 <br />
 <br />
 ![Step6](https://user-images.githubusercontent.com/41703901/123559954-d8706480-d7bc-11eb-9606-fe86c7ae5f6f.png)
 <br />
-**select the buffer number which you had earlier copied your contents in **
+**select the buffer number which you had earlier copied your contents in**
 <br />
 <br />
 ![Step7](https://user-images.githubusercontent.com/41703901/123559956-d9a19180-d7bc-11eb-8763-4ca10e47f16b.png)
