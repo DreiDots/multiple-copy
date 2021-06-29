@@ -3,7 +3,7 @@
 	"displayName": "multiple-copy",
 	"publisher": "DreiDots",
 	"description": "",
-	"version": "0.0.2",
+	"version": "0.0.8",
 	"engines": {
 		"vscode": "^1.57.0"
 	},
@@ -24,7 +24,22 @@
 				"command": "multiple-copy.pastemultiple",
 				"title": "pastemultiple"
 			}
-		]
+		],
+		"keybindings": [
+		      {
+			"command": "multiple-copy.copymultiple",
+			"key": "ctrl+alt+c",
+			"mac": "cmd+alt+c",
+			"when": "editorTextFocus"
+		      },
+		      {
+			"command": "multiple-copy.pastemultiple",
+			"key": "ctrl+alt+v",
+			"mac": "cmd+alt+v",
+			"when": "editorTextFocus"
+		      }
+
+		    ]
 	},
 	"scripts": {
 		"lint": "eslint .",

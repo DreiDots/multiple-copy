@@ -10,14 +10,14 @@ This extension helps with problem of having a single copy instance, By using thi
 
 ### To copy the selected text :
 <ol>
-<li>Enter ctrl+shift+p  (to open command palette) or use shift + c to copy skip step 2 if you do that.</li>
+<li>Enter ctrl+shift+p  (to open command palette) or use ctrl+alt+ c to copy skip step 2 if you do that.</li>
 <li>Enter copymultiple command.</li>
 <li>Extension will prompt for number to copy current selected text.</li>
 </ol>
 
 ### To paste the particular copied instance : 
 <ol>
-<li>Enter ctrl+shift+p  (to open command palette) or use shift + v to paste skip step 2 if you do that.</li>
+<li>Enter ctrl+shift+p  (to open command palette) or use ctrl+alt+ v to paste skip step 2 if you do that.</li>
 <li>Enter past emultiple command.</li>
 <li>Extension will prompt for number to paste previously copied data allocated to that number.</li>
 </ol>
@@ -34,7 +34,7 @@ This extension helps with problem of having a single copy instance, By using thi
 
 ![Step2](https://user-images.githubusercontent.com/41703901/123559945-d0182980-d7bc-11eb-92d1-204e57ca7b45.png)
 <br />
-**ctrl+shift+p to open the command pallet and select the multiple copy  or use shift + c to copy**
+**ctrl+shift+p to open the command pallet and select the multiple copy  or use ctrl+alt+ c to copy**
 <br />
 <br />
 ![Step3](https://user-images.githubusercontent.com/41703901/123559949-d1e1ed00-d7bc-11eb-9b49-b66d42f62ecc.png)
@@ -49,7 +49,7 @@ This extension helps with problem of having a single copy instance, By using thi
 <br />
 ![Step5](https://user-images.githubusercontent.com/41703901/123559951-d4dcdd80-d7bc-11eb-88d0-2d26cd237c46.png)
 <br />
-**go to wherever you want to paste the data you have coped and again use command pallet (ctrl+shift+p) and chose pastemultiple or use shift+v**
+**go to wherever you want to paste the data you have coped and again use command pallet (ctrl+shift+p) and chose pastemultiple or use ctrl+alt+ v**
 <br />
 <br />
 ![Step6](https://user-images.githubusercontent.com/41703901/123559954-d8706480-d7bc-11eb-9606-fe86c7ae5f6f.png)
