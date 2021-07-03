@@ -4,6 +4,7 @@ const vscode = require('vscode');
 const fs = require('fs')
 const path = require('path');
 const { fileURLToPath } = require('url');
+const { validateLocaleAndSetLanguage } = require('typescript');
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
@@ -35,8 +36,10 @@ function activate(context) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('multiple-copy.copymultiple', function () {
+	let disposable = vscode.commands.registerCommand('multiple-copy.copymultiple',function () {
 			// The code you place here will be executed every time your command is executed
+	
+
 			vscode.window.showInputBox({
 				placeholder: 'Example: 1', // Placeholder
 				prompt: 'Type copy/paste number', // An indication of what to do
@@ -73,46 +76,41 @@ function activate(context) {
 			
 	});
 
-	let pastable = vscode.commands.registerCommand('multiple-copy.pastemultiple', function () {
+	let pastable = vscode.commands.registerCommand('multiple-copy.pastemultiple', async function () {
 		// The code you place here will be executed every time your com
 		var editor = vscode.window.activeTextEditor;
 		//output.txt read -> insert at current_cursor_position location
-		
-		vscode.window.showInputBox({
-			placeholder: 'Example: 1', // Placeholder
-			prompt: 'Type copy/paste number', // An indication of what to do
-			value: '0' // A value by default. In this case leave it empty
-		}).then(value => {
-				fs.readFile(copy_file,'utf8',(err,data)=>{
-				// console.log(data)
-				var readData = JSON.parse(data)
 
-				var key = 'copy' + value.toString()
+		//show quickpick preview of copied instances..
+		fs.readFile(copy_file,'utf8',async (err,data)=>{
+			var readData = JSON.parse(data);
+			var copied_items = []
 
-				if(readData[key]!==null || readData[key]!==undefined){
-						
-					// the Position object gives you the line and character where the cursor is
-					
-					var pasteData = readData[key]['value']
+			for(item in readData){
+				console.log(readData[item]['value'])
+				copied_items.push({label: readData[item]['value'],target: vscode.ConfigurationTarget.Global})
+			}
+			await vscode.window.showQuickPick(copied_items,{placeHolder: "Select copied.."}).then((response)=>{
+				if(response!=null || response!=undefined){
 					const position = editor.selection.active;
-					// console.log(position)
+					console.log(response.label)
 
 					editor.edit((editBuilder) =>
 					editBuilder.insert(
 							new vscode.Position(position._line , position._character),
-							pasteData
+							response.label
 						)
 					);
-
-					// vscode.window.showInformationMessage(data);
-					// vscode.window.showInformationMessage(position);	
 				}
-				else{
-						vscode.window.showInformationMessage("paste for this number not available..please check if copied with this key");
-					}
-			})		
-			// vscode.window.showInformationMessage("pastable");
-		});
+				
+			}).catch((err)=>{
+				console.error(err);
+			});
+			
+		})
+		
+
+		
 	})
 		
 

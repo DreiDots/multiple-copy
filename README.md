@@ -18,8 +18,8 @@ This extension helps with problem of having a single copy instance, By using thi
 ### To paste the particular copied instance : 
 <ol>
 <li>Enter ctrl+shift+p  (to open command palette) or use ctrl+alt+ v to paste skip step 2 if you do that.</li>
-<li>Enter past emultiple command.</li>
-<li>Extension will prompt for number to paste previously copied data allocated to that number.</li>
+<li>Enter paste multiple command.</li>
+<li>Extension will display the dropdown of copied data.Select particular copied data from drop down menu intended tobe pasted.</li>
 </ol>
 
 <br />
