@@ -3,7 +3,7 @@
 	"displayName": "multiple-copy",
 	"publisher": "DreiDots",
 	"description": "",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"engines": {
 		"vscode": "^1.57.0"
 	},
@@ -64,3 +64,5 @@
 		"installedTimestamp": 1624851560383
 	}
 }
+
+

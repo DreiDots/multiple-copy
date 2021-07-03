@@ -4,7 +4,6 @@ const vscode = require('vscode');
 const fs = require('fs')
 const path = require('path');
 const { fileURLToPath } = require('url');
-const { validateLocaleAndSetLanguage } = require('typescript');
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
@@ -20,6 +19,9 @@ function activate(context) {
 
 	var copy_dir = path.dirname(__dirname)
 	var copy_file = path.join(copy_dir,'.output.txt')
+	
+	console.log(copy_file)
+
 	var resource_cnt = 0
 	//create hidden file for copy 
 	if(!fs.existsSync(copy_file)) {
@@ -60,7 +62,7 @@ function activate(context) {
 					fs.readFile(copy_file,function(err,content){
 						data = JSON.parse(content)
 						
-						var key = 'copy' + resource_cnt.toString()
+						var key =  resource_cnt.toString() + " ) :"
 						data[key] = {
 							'value' : text
 						}
@@ -72,8 +74,7 @@ function activate(context) {
 					})
 					vscode.window.showInformationMessage(text);
 			});
-				
-			
+
 	});
 
 	let pastable = vscode.commands.registerCommand('multiple-copy.pastemultiple', async function () {
@@ -87,19 +88,19 @@ function activate(context) {
 			var copied_items = []
 
 			for(item in readData){
-				console.log(readData[item]['value'])
-				copied_items.push({label: readData[item]['value'],target: vscode.ConfigurationTarget.Global})
+				// console.log(readData[item]['value'])
+				copied_items.push({label:item ,description:readData[item]['value'],target: vscode.ConfigurationTarget.Global})
 			}
 			await vscode.window.showQuickPick(copied_items,{placeHolder: "Select copied.."}).then((response)=>{
 				if(response!=null || response!=undefined){
 					const position = editor.selection.active;
-					console.log(response.label)
+					console.log(response);
 
 					editor.edit((editBuilder) =>
-					editBuilder.insert(
-							new vscode.Position(position._line , position._character),
-							response.label
-						)
+						editBuilder.insert(
+								new vscode.Position(position._line , position._character),
+								response.description
+							)
 					);
 				}
 				

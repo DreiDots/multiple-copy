@@ -64,3 +64,11 @@ This extension helps with problem of having a single copy instance, By using thi
 <br />
 
 By using this you could use multiple buffer to copy mutliple amount of data to be used at convinience.
+
+
+
+
+
+
+
+
